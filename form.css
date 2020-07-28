@@ -1,0 +1,79 @@
+
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+.question {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(208, 213, 216);
+  }
+
+.question:hover input ~ .checkmark {
+    background-color: rgb(185, 181, 181);
+}
+
+.question input:active ~ .checkmark {
+    background-color: rgb(208, 213, 216);
+}
+
+.question input:checked ~ .checkmark {
+    background-color: rgb(0, 255, 221);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.question input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.question .checkmark:after {
+    left: 7px;
+    bottom: 6px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+input[type=button] {
+    font-size: 20px;
+    margin-top: 40px;
+    background-color: white;
+    border: solid lightgray 1px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+input[type=button]:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+input[type=button]:active {
+    background-color: gray;
+    border: solid gray 1px;
+}
+
+input[type=button]:focus {
+    outline: none;
+}

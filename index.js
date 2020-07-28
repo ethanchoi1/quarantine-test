@@ -1,5 +1,4 @@
-function getCheckboxes() {
-    var stereotypes =
+var stereotypes =
         [
             "Grown out your hair?",
             "Dyed your hair?",
@@ -43,6 +42,8 @@ function getCheckboxes() {
             "Watched a favorite business close down?",
             "Made a new playlist?"
         ]
+
+function getCheckboxes() {
     var result = "", temp = "", i = 0;
     for(i = 0; i < stereotypes.length; i++) {
         temp =
@@ -54,6 +55,27 @@ function getCheckboxes() {
             + "</li>\n\n";
         result = result.concat(temp);
     }
-    console.log(result);
+    // console.log(result);
     return result;
+}
+
+function countCheckboxes() {
+    var total = 0, i = 0;
+    for(i = 0; i < stereotypes.length; i++) {
+        if(document.getElementById("question" + (i+1)).checked) {
+            total++;
+        }
+    }
+    // console.log(result);
+    sessionStorage.setItem("total", total);
+}
+
+function writeTotal() {
+    // console.log(sessionStorage.getItem("total"));
+    if (typeof(Storage) !== "undefined") {
+        document.getElementById("total").innerHTML = sessionStorage.getItem("total");
+    }
+    else {
+        document.getElementById("total").innerHTML = "Sorry, your browser does not support Web Storage...";
+    }
 }

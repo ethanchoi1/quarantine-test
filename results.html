@@ -2,8 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Quarantine Test</title>
+        <title>Quarantine Test Results</title>
         <link href="mainstyles.css" rel="stylesheet">
+        <link href="results.css" rel="stylesheet">
         <link href="form.css" rel="stylesheet">
         <script src="index.js"></script>
     </head>
@@ -13,13 +14,15 @@
                 Quarantine Test
             </div>
             <div class="main">
-                <ol>
-                    <script>
-                        document.write(getCheckboxes());
-                    </script>
-                </ol>
-                <a href="results.html">
-                    <input type="button" name="submit" value="Calculate my score!" onclick="countCheckboxes()">
+                <div class="total-wrapper">
+                    Your quarantine score:
+                    <div id="total"></div>
+                </div>
+                <script>
+                    writeTotal();
+                </script>
+                <a href="index.html">
+                    <input type="button" name="submit" value="Test again!">
                 </a>
             </div>
             <div class="footer-wrapper">

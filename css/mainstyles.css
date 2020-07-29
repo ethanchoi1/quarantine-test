@@ -7,31 +7,72 @@ html, body {
 
 .title {
     text-align: center;
-    font-size: 78px;
+    font-size: 84px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 30px;
 }
 
 .main-wrapper {
     position: relative;
     width: 100%;
     text-align: center;
+    background-color: rgb(245, 245, 220);
 }
 
 .main {
     display: inline-block;
     text-align: left;
     font-size: 24px;
-    margin: 0 auto 100px auto;
+    background-color: white;
+    padding: 10px 10px 0 10px;
+    margin: 10px auto 100px auto;
+    border: dashed rgb(177, 177, 136) 4px;
+    box-shadow: 4px 4px 12px #888888;
 }
 
 .footer-wrapper {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     left: 50%;
-    font-size: 24px;
 }
 
 .footer {
     position: relative;
     left: -50%;
-    font-size: 24px;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        width: 100vw;
+    }
+    .title {
+        font-size: 52px;
+    }
+    
+    .subtitle {
+        font-size: 22px;
+    }
+
+    .main-wrapper {
+        overflow: hidden;
+    }
+
+    .main {
+        font-size: 22px;
+        margin: 10px 10px 80px 10px;
+        box-shadow: 2px 2px 12px #888888;
+    }
+
+    .footer-wrapper {
+        width: 100%;
+    }
+
+    .footer {
+        width: 100%;
+        font-size: 14px;
+    }
 }

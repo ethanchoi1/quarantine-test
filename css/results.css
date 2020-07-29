@@ -2,6 +2,12 @@
     height: 100%;
 }
 
+.main {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
 .total-wrapper {
     font-size: 42px;
     text-align: center;

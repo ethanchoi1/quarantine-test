@@ -76,12 +76,12 @@ var stereotypes =
         "Made plans with friends for \"when this is all over?\"",
 
         // Gaming
-        "Played games with friends?",
+        "Played video games with friends?",
         "Bought a new gaming console/device?",
         "Tried a new video game?",
         "Played Animal Crossing?",
         "Played Minecraft?",
-        "Got lost in a game’s world because it’s better than the real one?",
+        "Got lost in a game’s world because the real world sucks?",
 
         // ?
         "Got day-drunk?",
@@ -119,7 +119,7 @@ var stereotypes =
         "Checked the number of Covid-19 cases?",
         "Disinfected your house?",
         "Got worried by someone coughing near you?",
-        "Silently judged people for not practicing social distancing?",
+        "Silently judged people for not wearing masks or practicing social distancing?",
         "Saw a person outside without a mask?",
         "Watched a video of a Karen having a public freakout?",
         "Witnessed a Karen’s freakout in person?",
@@ -149,6 +149,7 @@ function countCheckboxes() {
             total++;
         }
     }
+    total = 100 - total;
     sessionStorage.setItem("total", total);
 }
 
